@@ -1,0 +1,102 @@
+body {
+  position: relative;
+  background-color: darkgrey;
+  margin: 0;
+  padding-bottom: 2rem;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  font-size: 24px;
+  align-items: center;
+  flex-direction: column;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: gray;
+  height: 5rem;
+  width: 100%;
+}
+
+* {margin: 0; padding: 0; border: 0; box-sizing: border-box;}
+
+section {
+  display: flex;
+  flex-direction: row;
+  width: 50rem;
+  text-align: center;
+}
+
+li {
+  padding-top: 10px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
+  background-color: gray;
+}
+
+.navul {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar {
+  list-style-type: none;
+  float: left;
+  text-decoration: none;
+  -webkit-text-stroke: 2px black;
+  color: #8b0000;
+  font-size: 40px;
+}
+
+.navul a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*/ Professions CSS layout /*/
+.professionssection {
+  display: flex;
+  width: 100%;
+  padding-top: 3rem;
+}
+
+.professionsa {
+  width: 25%;
+  height: 25%;
+}
+
+.professionsa img {
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+.professionstitle {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+/*/ FullRed CSS things /*/
+
+.fullredcontainer {
+  padding: 1rem;
+  padding-left: 1rem;
+}
+
+select {
+  font-size: 20px;
+}
+
+b {
+  font-size: 26px;
+}
