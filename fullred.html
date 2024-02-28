@@ -17,21 +17,37 @@
       <li class="navbar"><a href="fullred.html">FullRed</a></li>
     </ul>
   </nav>
-  <div class="fullredcontainer">
-    <div>
+  <section class="fullsection">
+    <div class="fullredcontainera">
       <b>Select ailment from the list:</b>
       <select id="ailmentlist" onchange="selectedAilment()">
     </div>
     <option> ---Choose ailment--- </option>
-    <option>Stunned</option>
-    <option>Poisoned</option>
-    <option>Blinded</option>
-    <option>Restrained</option>
+    <option value="1">Stunned</option>
+    <option value="2">Poisoned</option>
+    <option value="3">Blinded</option>
+    <option value="4">Restrained</option>
     </select>
     <h3>Ailments list (Can also add manually):</h3>
     <input type="text" id="ailmentInput" placeholder=" Enter ailment...">
     <button onclick="addAilment()">Add status</button>
-    <ul id="ailmentList"></ul>
+    <div class="fullredcontainerb"></div>
+      <ul id="ailmentList"></ul>
+        <table>
+        <tr>
+          <td id="poison"></td>
+          <td id="stunned"></td>
+          <td id="blinded"></td>
+          <td id="restrained"></td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  <div id="timerbox">
+    <h1>Countdown timer:</h1>
+    <div id="timer">00:00</div>
+    <p>How many seconds?:</p><input type="number" name="" id="timerseconds">
+    <button id="timerbutton" onclick="startCounting()">Countdown</button>
   </div>
 </body>
   </html>

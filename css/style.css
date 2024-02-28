@@ -88,9 +88,27 @@ footer {
 
 /*/ FullRed CSS things /*/
 
-.fullredcontainer {
+.fullredsection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
   padding-left: 1rem;
+  text-align: left;
+}
+
+.fullredcontainera {
+  width: 50%;
+  padding: 1rem;
+  padding-left: 1rem;
+  text-align: left;
+}
+
+.fullredcontainerb {
+  width: 50%;
+  padding: 1rem;
+  padding-left: 1rem;
+  text-align: right;
 }
 
 select {
@@ -99,4 +117,23 @@ select {
 
 b {
   font-size: 26px;
+}
+
+#timer {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#timerbox {
+  text-align: center;
+  font-size: 30px;
+}
+
+#timerseconds {
+  width: 5rem;
+  font-size: large; 
+}
+
+#timerbutton {
+  font-size: large;
 }

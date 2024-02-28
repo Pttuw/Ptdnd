@@ -28,4 +28,31 @@ function addAilment() {
 function selectedAilment() {
   const mylist = document.getElementById("ailmentlist");
   document.getElementById("ailmentInput").value = mylist.options[mylist.selectedIndex].text;
+  idtest = mylist.options[mylist.selectedIndex].value;
+  if (idtest == 1) {
+    let poisonstatus = document.getElementById("poison");
+    let poisonOn = "Poisoned!";
+    poisonstatus.innerHTML = poisonOn;
+  }
+  else {
+    console.log("Error")
+  }
 }
+
+function startCounting() {
+  numberofseconds = document.getElementById("timerseconds").value;
+  setcountdown = document.getElementById("timer");
+  setcountdown.innerHTML = numberofseconds;
+  timeup = "Time's up!"
+  const timer = setInterval(function() {
+    numberofseconds--;
+    setcountdown.innerHTML = numberofseconds;
+    if (numberofseconds <= 0) {
+      clearInterval(timer);
+      setcountdown.innerHTML = timeup;
+    } 
+  }, 1000);
+}  
+
+    
+ 
