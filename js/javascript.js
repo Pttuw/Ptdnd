@@ -34,8 +34,15 @@ function selectedAilment() {
     let poisonOn = "Poisoned!";
     poisonstatus.innerHTML = poisonOn;
   }
-  else {
-    console.log("Error")
+  else if (idtest == 2) {
+    let stunnedstatus = document.getElementById("stunned");
+    let stunnedOn = "Stunned!";
+    stunnedstatus.innerHTML = stunnedOn;
+  }
+  else if (idtest == 3) {
+    let blindedstatus = document.getElementById("blinded");
+    let blindedOn = "You're blinded!";
+    blindedstatus.innerHTML = blindedOn;
   }
 }
 
@@ -54,5 +61,23 @@ function startCounting() {
   }, 1000);
 }  
 
+function addTask() {
+  const input = document.getElementById("newTask");
+  const list = document.getElementById("tasks");
+  const newTask = document.createElement("li");
+  newTask.textContent = input.value;
+  newTask.addEventListener("click", taskComplete);
+  list.appendChild(newTask);
+  input.value = "";
+}
     
- 
+function taskComplete(event) {
+  const task = event.target;
+  task.classList.toggle("completed");
+}
+
+function removeCompleted() {
+  removelist = document.querySelectorAll(".completed");
+  console.log(removelist.length);
+  removelist.forEach(newTask => newTask.remove()); 
+}

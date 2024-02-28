@@ -30,10 +30,6 @@ section {
   text-align: center;
 }
 
-li {
-  padding-top: 10px;
-}
-
 footer {
   position: absolute;
   bottom: 0;
@@ -91,24 +87,18 @@ footer {
 .fullredsection {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 1rem;
   padding-left: 1rem;
   text-align: left;
+  max-height: 50%;
 }
 
 .fullredcontainera {
-  width: 50%;
+  width: 25%;
   padding: 1rem;
   padding-left: 1rem;
   text-align: left;
-}
-
-.fullredcontainerb {
-  width: 50%;
-  padding: 1rem;
-  padding-left: 1rem;
-  text-align: right;
 }
 
 select {
@@ -136,4 +126,24 @@ b {
 
 #timerbutton {
   font-size: large;
+}
+
+#todobody {
+  text-align: center;
+  margin: 0px;
+}
+
+#tasks {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: red;
 }
