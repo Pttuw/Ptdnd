@@ -63,6 +63,31 @@
     <ul id="tasks"></ul>
     <button type="button" onclick="removeCompleted()">Remove Completed</button>  
   </div>
+  <div id="fullredcontainera" class="calcbody">
+    <h1 id=>Web-based Calculator</h1>
+    <div id="calculator">
+      <!-- Buttons for digits, operations, equals, and clear -->
+      <button class="frbutton" onclick="appendToDisplay('7')">7</button>
+      <button class="frbutton" onclick="appendToDisplay('8')">8</button>
+      <button class="frbutton" onclick="appendToDisplay('9')">9</button>
+      <button class="frbutton" onclick="performOperation('/')">/</button>
+      <button class="frbutton" onclick="appendToDisplay('4')">4</button>
+      <button class="frbutton" onclick="appendToDisplay('5')">5</button>
+      <button class="frbutton" onclick="appendToDisplay('6')">6</button>
+      <button class="frbutton" onclick="performOperation('*')">*</button>
+      <button class="frbutton" onclick="appendToDisplay('1')">1</button>
+      <button class="frbutton" onclick="appendToDisplay('2')">2</button>
+      <button class="frbutton" onclick="appendToDisplay('3')">3</button>
+      <button class="frbutton" onclick="performOperation('-')">-</button>
+      <button class="frbutton" onclick="appendToDisplay('0')">0</button>
+      <button class="frbutton" onclick="appendToDisplay('.')">.</button>
+      <button class="frbutton" onclick="calculateResult()">=</button>
+      <button class="frbutton" onclick="performOperation('+')">+</button>
+      <button class="frbutton" onclick="clearDisplay()">C</button>
+      <input type="text" id="display">
+    </div>
+</div>
+
   </section>
   
 </body>

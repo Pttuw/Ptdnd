@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Form Validation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    input {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    .error-message {
+      color: red;
+      font-size: 14px;
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Interactive Form Validation</h1>
+  <form id="registrationForm" onsubmit="return validateForm()">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+
+    <div id="usernameError" class="error-message"></div>
+    
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email">
+
+    <div id="emailError" class="error-message"></div>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+
+    <div id="passwordError" class="error-message"></div>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword">
+
+    <div id="confirmPasswordError" class="error-message"></div>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function validateForm() {
+        const userName = document.getElementById("username").value;
+        const eMail = document.getElementById("email").value;
+        const passWord = document.getElementById("password").value;
+        const confirmPassWord = document.getElementById("confirmPassword").value;
+        const userNamelength = "Name must be longer than 3 characters."
+				const emailCheck = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (userName === "" || eMail === "" || passWord === "" || confirmPassWord === "") {
+            alert("Fields cannot be empty");
+            return false;
+				}
+				if (userName.length <= 3) {
+            document.getElementById("usernameError").innerHTML = userNamelength;
+            return false;
+				} else if (userName.length >= 4) {
+					document.getElementById("usernameError").innerHTML = "";
+				}
+				if (!emailCheck.test(eMail)) {
+						document.getElementById("emailError").innerHTML = "Enter valid e-mail.";
+						return false;
+				} else if (emailCheck.test(eMail)) {
+					document.getElementById("emailError").innerHTML = "";
+        }
+				if (passWord.length <= 6) {
+					document.getElementById("passwordError").innerHTML = "Password needs to be over 6 characters long.";
+					return false;
+				} else if (passWord.length >= 7) {
+					document.getElementById("passwordError").innerHTML = "";
+				}
+				if (passWord != confirmPassWord) {
+					document.getElementById("confirmPasswordError").innerHTML = "Passwords dont match.";
+					console.log("Error");
+					return false;
+				} else if (passWord === confirmPassWord) {
+					document.getElementById("confirmPassword").innerHTML = "";
+				}
+				return true;
+		}
+  </script>
+</body>
+</html>
+

@@ -46,6 +46,8 @@ function selectedAilment() {
   }
 }
 
+/*/ Countdown Timer JS /*/
+
 function startCounting() {
   numberofseconds = document.getElementById("timerseconds").value;
   setcountdown = document.getElementById("timer");
@@ -60,6 +62,7 @@ function startCounting() {
     } 
   }, 1000);
 }  
+/*/ To do list JS /*/
 
 function addTask() {
   const input = document.getElementById("newTask");
@@ -80,4 +83,23 @@ function removeCompleted() {
   removelist = document.querySelectorAll(".completed");
   console.log(removelist.length);
   removelist.forEach(newTask => newTask.remove()); 
+}
+
+/*/ Calculater JS /*/
+function appendToDisplay(val) {
+  document.getElementById("display").value += val 
+}
+
+function performOperation(operation) {
+  document.getElementById("display").value += operation;
+}
+
+function clearDisplay() {
+  document.getElementById("display").value="";
+}
+
+function calculateResult() {
+  const expression = document.getElementById("display").value;
+  const result = eval(expression);
+  document.getElementById("display").value=result;
 }

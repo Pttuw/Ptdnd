@@ -147,3 +147,29 @@ li {
   text-decoration: line-through;
   color: red;
 }
+
+#calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.frbutton {
+  padding: 10px;
+  font-size: 16px;
+}
+
+#display {
+  grid-column: span 4;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid #ccc;
+}
+
+.calcbody {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 50px;
+}
