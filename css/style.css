@@ -154,11 +154,13 @@ li {
   gap: 10px;
   max-width: 300px;
   margin: 0 auto;
+  float: left;
 }
 
 .frbutton {
   padding: 10px;
   font-size: 16px;
+  text-align: center;
 }
 
 #display {
@@ -168,8 +170,37 @@ li {
   border: 1px solid #ccc;
 }
 
-.calcbody {
+#calcbody {
   font-family: Arial, sans-serif;
-  text-align: center;
-  margin: 50px;
+  text-align: left;
+  margin: 0;
+}
+
+#frregbody {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  float: left;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+#registrationForm {
+  max-width: 400px;
+  margin: 0;
+  float: left;
+}
+.reginput {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  box-sizing: border-box;
+  float: left;
+}
+label {
+  clear: left;
 }

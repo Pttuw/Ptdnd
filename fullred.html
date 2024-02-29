@@ -63,8 +63,8 @@
     <ul id="tasks"></ul>
     <button type="button" onclick="removeCompleted()">Remove Completed</button>  
   </div>
-  <div id="fullredcontainera" class="calcbody">
-    <h1 id=>Web-based Calculator</h1>
+  <div class="fullredcontainera" id="calcbody">
+    <h1>Web-based Calculator</h1>
     <div id="calculator">
       <!-- Buttons for digits, operations, equals, and clear -->
       <button class="frbutton" onclick="appendToDisplay('7')">7</button>
@@ -86,9 +86,36 @@
       <button class="frbutton" onclick="clearDisplay()">C</button>
       <input type="text" id="display">
     </div>
-</div>
-
-  </section>
+  </div>
+  <div class="fullredcontainera">
+    <h1>Interactive Form Validation</h1>
+    <div id="frregbody">
+      <form id="registrationForm" onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input class="reginput" type="text" id="username" name="username">
+      
+        <div id="usernameError" class="error-message"></div>
+          
+        <label for="email">Email:</label>
+        <input class="reginput" type="text" id="email" name="email">
+      
+        <div id="emailError" class="error-message"></div>
+      
+        <label for="password">Password:</label>
+        <input class="reginput" type="password" id="password" name="password">
+      
+        <div id="passwordError" class="error-message"></div>
+      
+        <label for="confirmPassword">Confirm Password:</label>
+        <input class="reginput" type="password" id="confirmPassword" name="confirmPassword">
+      
+        <div id="confirmPasswordError" class="error-message"></div>
+      
+        <input class="reginput" type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+</section>
   
 </body>
   </html>
