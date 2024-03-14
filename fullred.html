@@ -17,8 +17,8 @@
       <li class="navbar"><a href="fullred.html">FullRed</a></li>
     </ul>
   </nav>
-  <section class="fullredsection">
-    <div class="fullredcontainera">
+  <section class="sections100">
+    <div class="divcontainera">
       <b>Select ailment from the list:</b>
       <select id="ailmentlist" onchange="selectedAilment()">
         <option> ---Choose ailment--- </option>
@@ -28,12 +28,12 @@
         <option value="4">Restrained</option>
     </select>
   </div>
-  <div class="fullredcontainera">
+  <div class="divcontainera">
     <h3>Ailments list (Can also add manually):</h3>
     <input type="text" id="ailmentInput" placeholder=" Enter ailment...">
     <button onclick="addAilment()">Add status</button>
   </div>
-    <div class="fullredcontainera">
+    <div class="divcontainera">
       <ul id="ailmentList"></ul>
         <table>
         <tr>
@@ -44,7 +44,7 @@
         </tr>
       </table>
     </div>
-    <div class="fullredcontainera">
+    <div class="divcontainera">
       <div id="timerbox">
         <h1>Countdown timer:</h1>
         <div id="timer">00:00</div>
@@ -53,8 +53,8 @@
       </div>
     </div>
   </section>
-  <section class="fullredsection">
-    <div class="fullredcontainera">
+  <section class="sections100">
+    <div class="divcontainera">
     <h1>To-Do List</h1>
     <form id="taskForm">
       <input type="text" id="newTask" placeholder="Enter a new task">
@@ -63,7 +63,7 @@
     <ul id="tasks"></ul>
     <button type="button" onclick="removeCompleted()">Remove Completed</button>  
   </div>
-  <div class="fullredcontainera" id="calcbody">
+  <div class="divcontainera" id="calcbody">
     <h1>Web-based Calculator</h1>
     <div id="calculator">
       <!-- Buttons for digits, operations, equals, and clear -->
@@ -87,7 +87,7 @@
       <input type="text" id="display">
     </div>
   </div>
-  <div class="fullredcontainera">
+  <div class="divcontainera">
     <h1>Interactive Form Validation</h1>
     <div id="frregbody">
       <form id="registrationForm" onsubmit="return validateForm()">

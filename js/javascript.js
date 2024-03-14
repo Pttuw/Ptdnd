@@ -52,7 +52,7 @@ function startCounting() {
   numberofseconds = document.getElementById("timerseconds").value;
   setcountdown = document.getElementById("timer");
   setcountdown.innerHTML = numberofseconds;
-  timeup = "Time's up!"
+  timeup = "Time's up!";
   const timer = setInterval(function() {
     numberofseconds--;
     setcountdown.innerHTML = numberofseconds;
@@ -86,8 +86,10 @@ function removeCompleted() {
 }
 
 /*/ Calculater JS /*/
+let x = "";
+let y = "";
 function appendToDisplay(val) {
-  document.getElementById("display").value += val 
+ x = document.getElementById("display").value += val;  
 }
 
 function performOperation(operation) {
@@ -111,7 +113,7 @@ function validateForm() {
   const eMail = document.getElementById("email").value;
   const passWord = document.getElementById("password").value;
   const confirmPassWord = document.getElementById("confirmPassword").value;
-  const userNamelength = "Name must be longer than 3 characters."
+  const userNamelength = "Name must be longer than 3 characters.";
   const emailCheck = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (userName === "" || eMail === "" || passWord === "" || confirmPassWord === "") {

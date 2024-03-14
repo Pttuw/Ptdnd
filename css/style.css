@@ -84,21 +84,28 @@ footer {
 
 /*/ FullRed CSS things /*/
 
-.fullredsection {
+.sections100 {
   width: 100%;
   display: flex;
   flex-direction: row;
   padding: 1rem;
   padding-left: 1rem;
-  text-align: left;
+  text-align: center;
   max-height: 50%;
 }
 
-.fullredcontainera {
+.divcontainera {
   width: 25%;
   padding: 1rem;
   padding-left: 1rem;
   text-align: left;
+}
+
+.divcontainerb {
+  width: 50%;
+  padding: 1rem;
+  padding-left: 1rem;
+  text-align: center;
 }
 
 select {
@@ -203,4 +210,21 @@ li {
 }
 label {
   clear: left;
+}
+
+#testsection {
+  width: 100%;
+  text-align: center;
+}
+
+.testdiv img{
+  width: 50%;
+  padding: 10px;
+}
+
+#dragon {
+  max-width: 25%;
+  padding: 5px;
+  padding-top: 0;
+
 }
